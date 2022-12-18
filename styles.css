@@ -1,0 +1,49 @@
+.flex-container{
+    margin: auto;
+}
+
+.title {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.grid {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.pixel {
+    background-color: white;
+    border: 0.01px solid black;
+}
+
+.content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.updown {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 10px;
+}
+
+.sizer {
+    display: flex;
+    flex-direction: row;
+}
