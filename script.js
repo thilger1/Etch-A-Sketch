@@ -1,6 +1,6 @@
-const blackButton = document.querySelector('blackButton');
-const rainbowButton = document.querySelector('rainbowButton');
-const eraserButton = document.querySelector('eraserButton');
+const blackButton = document.querySelector('#blackButton');
+const rainbowButton = document.querySelector('#rainbowButton');
+const eraserButton = document.querySelector('#eraserButton');
 
 let blackMode = true;
 let rainbowMode = false;
