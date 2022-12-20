@@ -1,3 +1,12 @@
+button{
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: black;
+    height: 60px;
+    width: 120px;
+}
+
 .flex-container{
     margin: auto;
 }
@@ -11,15 +20,19 @@
 
 .grid {
     margin: auto;
-    width: 400px;
+    width: 800px;
     height: 400px;
     display: grid;
     margin-bottom: 20px;
+    border: gray solid 2px;
 }
 
 .pixel {
     background-color: white;
-    border: 0.01px solid black;
+}
+
+.pixel:hover{
+    background-color: gainsboro;
 }
 
 .content {
