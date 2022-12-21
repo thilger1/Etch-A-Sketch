@@ -9,6 +9,10 @@
     width: 120px;
 }
 
+.btn:active{
+    transform: scale(0.8);
+}
+
 #clearButton:active {
     background-color: gray;
 }
@@ -66,18 +70,7 @@ form {
     text-align: center;
 }
 
-.updown div p {
-    font-family: cursive, 'apple chancery';;
-    font-weight: bold;
-    color: black;
-}
 
-input {
-    width: 100px;
-    height: 50px;
-    font-size: 30px;
-    padding-left: 30px;
-}
 
 h1{
     color:gold;
@@ -88,7 +81,6 @@ h1{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin
 }
 
 .sizer div p {
@@ -101,3 +93,38 @@ h1{
     margin-bottom: 3px;
     margin-top: 0px;
 }
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#height {
+    font-size: 40px;
+}
+
+.changeGrid {
+    border: none;
+    background: none;
+}
+
+.changeGrid:hover {
+    transform: scale(1.8);
+}
+
+.changeGrid:active {
+    transform: scale(0.8);
+}
+
