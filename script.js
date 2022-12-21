@@ -2,13 +2,14 @@ const blackButton = document.querySelector('#blackButton');
 blackButton.style.backgroundColor = 'gray';
 const rainbowButton = document.querySelector('#rainbowButton');
 const eraserButton = document.querySelector('#eraserButton');
+const clearButton = document.querySelector('#clearButton');
+const grid = document.querySelector('.grid');
 
 let blackMode = true;
 let rainbowMode = false;
 let eraserMode = false;
 
 function makeGrid(dimensions = 16){
-    let grid = document.querySelector('.grid');
     grid.style.gridTemplateColumns = `repeat(${dimensions * 2} , 1fr)`;
     grid.style.gridTemplateRows = `repeat(${dimensions} , 1fr)`;
 
@@ -38,10 +39,8 @@ blackButton.addEventListener('click', () => {
     rainbowMode = false;
     eraserMode = false;
 
+    resetButtons();
     blackButton.style.backgroundColor = 'gray';
-    rainbowButton.style.backgroundColor = 'white';
-    eraserButton.style.backgroundColor = 'white';
-    
 });
 
 rainbowButton.addEventListener('click', () => {
@@ -49,9 +48,8 @@ rainbowButton.addEventListener('click', () => {
     rainbowMode = true;
     eraserMode = false;
 
-    blackButton.style.backgroundColor = 'white';
+    resetButtons();
     rainbowButton.style.backgroundColor = 'gray';
-    eraserButton.style.backgroundColor = 'white';
 });
 
 eraserButton.addEventListener('click', () => {
@@ -59,9 +57,24 @@ eraserButton.addEventListener('click', () => {
     rainbowMode = false;
     eraserMode = true;
 
-    blackButton.style.backgroundColor = 'white';
-    rainbowButton.style.backgroundColor = 'white';
+    resetButtons();
     eraserButton.style.backgroundColor = 'gray';
 });
+
+clearButton.addEventListener('click', () => {
+    clearButton.style.backgroundColor = 'gray';
+    let pixel = document.querySelectorAll('.pixel');
+    pixel.forEach(pixel => {
+        pixel.style.backgroundColor = 'azure';
+    })
+    clearButton.style.backgroundColor = 'azure';
+})
+
+function resetButtons(){
+    blackButton.style.backgroundColor = 'azure';
+    rainbowButton.style.backgroundColor = 'azure';
+    eraserButton.style.backgroundColor = 'azure';
+}
+
 
 makeGrid(50);
