@@ -1,12 +1,18 @@
 
 .btn{
+    margin-top: 10px;
     font-family: cursive, 'apple chancery';;
     font-weight: bold;
-    background-color: white;
+    background-color: azure;
     color: black;
     height: 60px;
     width: 120px;
 }
+
+#clearButton:active {
+    background-color: gray;
+}
+
 
 .flex-container{
     margin: auto;
@@ -68,7 +74,9 @@ form {
 
 input {
     width: 100px;
-    height: 30px;
+    height: 50px;
+    font-size: 30px;
+    padding-left: 30px;
 }
 
 h1{
@@ -79,10 +87,17 @@ h1{
 .sizer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    margin
 }
 
 .sizer div p {
+    display: flex;
     color: gold;
     font-family: 'cursive', 'apple chancery';
+    text-align: center;
+    margin-right: 100%;
+    margin-left: 100%;
+    margin-bottom: 3px;
+    margin-top: 0px;
 }
