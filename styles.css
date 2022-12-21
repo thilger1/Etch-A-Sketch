@@ -1,6 +1,6 @@
 
 .btn{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive, 'apple chancery';;
     font-weight: bold;
     background-color: white;
     color: black;
@@ -54,11 +54,21 @@ body {
     gap: 10px;
 }
 
-.updown {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    gap: 10px;
+form {
+    width: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.updown div p {
+    font-family: cursive, 'apple chancery';;
+    font-weight: bold;
+    color: black;
+}
+
+input {
+    width: 100px;
+    height: 30px;
 }
 
 h1{
@@ -68,5 +78,11 @@ h1{
 
 .sizer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sizer div p {
+    color: gold;
+    font-family: 'cursive', 'apple chancery';
 }
