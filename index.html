@@ -10,20 +10,22 @@
             <div class="content">
                 <div class="grid"></div>
                 <div class="buttons">
-                    <button>Black</button>
-                    <button>Eraser</button>
-                    <button>Random</button>
-                    <button>Clear</button>
+                    <button id="blackButton" class="btn">Black</button>
+                    <button id="eraserButton" class="btn">Eraser</button>
+                    <button id="rainbowButton" class="btn">Random</button>
+                    <button id="clearButton" class="btn">Clear</button>
                     <div class="sizer">
-                        <div class="updown">
-                            <div><button>Up</button></div>
-                            <div><button>Down</button></div>
+                        <div>
+                        <p>Height</p>
                         </div>
-                        <div class="size"><p>Size</p></div>
+                        <div>
+                        <form>
+                            <input type="number" id="number" value="0" />
+                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </body>
     <script src="script.js"></script>
 </html>
