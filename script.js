@@ -4,6 +4,10 @@ const rainbowButton = document.querySelector('#rainbowButton');
 const eraserButton = document.querySelector('#eraserButton');
 const clearButton = document.querySelector('#clearButton');
 const grid = document.querySelector('.grid');
+const showHeight = document.querySelector('#height');
+const upButton = document.querySelector('#changeUp');
+const downButton = document.querySelector('#changeDown');
+let height = 30;
 
 let blackMode = true;
 let rainbowMode = false;
@@ -32,6 +36,7 @@ function makeGrid(dimensions = 16){
             }
         });
     }
+    showHeight.innerHTML = height;
 };
 
 blackButton.addEventListener('click', () => {
@@ -41,6 +46,22 @@ blackButton.addEventListener('click', () => {
 
     resetButtons();
     blackButton.style.backgroundColor = 'gray';
+});
+
+upButton.addEventListener('click', () => {
+    if (height < 40) {
+        height += 1;
+        clearGrid();
+        makeGrid(height);
+    }
+});
+
+downButton.addEventListener('click', () => {
+    if (height > 1){
+        height -= 1;
+        clearGrid();
+        makeGrid(height);
+    }
 });
 
 rainbowButton.addEventListener('click', () => {
@@ -61,14 +82,14 @@ eraserButton.addEventListener('click', () => {
     eraserButton.style.backgroundColor = 'gray';
 });
 
-clearButton.addEventListener('click', () => {
-    clearButton.style.backgroundColor = 'gray';
+clearButton.addEventListener('click', clearGrid);
+
+function clearGrid(){
     let pixel = document.querySelectorAll('.pixel');
     pixel.forEach(pixel => {
         pixel.style.backgroundColor = 'azure';
     })
-    clearButton.style.backgroundColor = 'azure';
-})
+};
 
 function resetButtons(){
     blackButton.style.backgroundColor = 'azure';
@@ -76,5 +97,4 @@ function resetButtons(){
     eraserButton.style.backgroundColor = 'azure';
 }
 
-
-makeGrid(50);
+makeGrid(height);
